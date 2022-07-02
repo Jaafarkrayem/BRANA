@@ -8,7 +8,7 @@ import "./BRANA.sol";
 
 pragma solidity = 0.8.13;
 
-contract BRANA_Company_Wallet {
+contract BranaPrivateSaleWallet {
     using SafeMath for uint256;
 
     address public constant zeroAddress = address(0x0);
