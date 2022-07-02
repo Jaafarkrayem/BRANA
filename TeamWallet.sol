@@ -1,14 +1,14 @@
 // SPDX-License-Identifier: MIT
 
 /************************
-BRANAVERSE COMPANY WALLET
+BRANAVERSE Team WALLET
 ************************/
 
 import "./BRANA.sol";
 
 pragma solidity = 0.8.13;
 
-contract BranaCompanyWallet {
+contract BranaTeamWallet {
     using SafeMath for uint256;
 
     address public constant zeroAddress = address(0x0);
