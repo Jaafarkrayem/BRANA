@@ -46,7 +46,7 @@ contract BranaPreSaleWallet {
     mapping(address => PreSaleWallet) public Receiver;
 
     modifier onlyOwner (){
-        require(msg.sender == owner, "Only BRANA owner can add Team");
+        require(msg.sender == owner, "Only BRANA owner");
         _;
     }
 
@@ -147,7 +147,7 @@ contract BranaPreSaleWallet {
     }
     function withdrawalBRANA(uint256 _amount, uint256 decimal, address to) external onlyOwner() {
         uint256 amount = BRANA.balanceOf(address(this)).sub(presaleVault);
-        require(amount > 0 && amount >= _amount, "No BRANA!");// can only withdraw what is not locked for team members.
+        require(amount > 0 && amount >= _amount, "No BRANA!");// can only withdraw what is not locked for PreSale Wallet.
         uint256 dcml = 10 ** decimal;
         emit WithdrawalBRANA( _amount, decimal, to);
         BRANA.transfer(to, _amount*dcml);
