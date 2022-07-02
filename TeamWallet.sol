@@ -51,7 +51,7 @@ contract BranaTeamWallet {
     
 
     modifier onlyOwner (){
-        require(msg.sender == owner, "Only BRANA owner can add Team");
+        require(msg.sender == owner, "Only BRANA owner");
         _;
     }
 
