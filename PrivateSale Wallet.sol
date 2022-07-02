@@ -27,7 +27,7 @@ contract BRANA_Company_Wallet {
     uint256 public mP = 5; /* Monthy percentage */
     
 
-    event PreSaleWalletAdded(address Wallet, uint256 Amount);
+    event PrivateSaleWalletAdded(address Wallet, uint256 Amount);
     event BRANAClaimed(address Wallet, address Operator, uint256 Amount);
     event ChangeOwner(address NewOwner);
     event WithdrawalBNB(uint256 _amount, uint256 decimal, address to); 
@@ -99,7 +99,7 @@ contract BRANA_Company_Wallet {
             privateSaleVault += _amount;
             return;
         }
-        emit PreSaleWalletAdded(_receiver, _amount);
+        emit PrivateSaleWalletAdded(_receiver, _amount);
         Receiver[_receiver].falseAmount = _amount;
         Receiver[_receiver].amount = _amount;
         Receiver[_receiver].lockTime = lockTime.add(block.timestamp);
