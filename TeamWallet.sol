@@ -27,8 +27,8 @@ contract BranaTeamWallet {
     uint256 public mP = 5; /* Monthy percentage */
     
 
-    event TeamAdded(address TEAM, uint256 Amount);
-    event BRANAClaimed(address Investor, uint256 Amount);
+    event TeamAdded(address Team, uint256 Amount);
+    event BRANAClaimed(address Team, uint256 Amount);
     event ChangeOwner(address NewOwner);
     event WithdrawalBNB(uint256 _amount, uint256 decimal, address to); 
     event WithdrawalBRANA(uint256 _amount,uint256 decimal, address to);
