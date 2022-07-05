@@ -93,6 +93,7 @@ constructor () ERC20("Brana", "BRANA") payable {
   directly to the contract then the owner will be able to send them back
 */
   function withdrawalToken(address _tokenAddr, uint256 _amount, uint256 decimal, address to) external onlyOwner() {
+  require(_tokenAddr != address(0),"address zero!");
         uint256 dcml = 10 ** decimal;
         ERC20 token = ERC20(_tokenAddr);
         emit WithdrawalToken(_tokenAddr, _amount, decimal, to);
