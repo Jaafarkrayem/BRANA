@@ -37,7 +37,7 @@ contract Branaverse is ERC20 {
     event WithdrawalToken(address _tokenAddr, uint256 _amount,uint256 decimals, address to);
 
     modifier onlyOwner(){
-        require(owner == msg.sender,"Only Owner");
+        require(msg.sender == owner,"Only Owner");
         _;
     }
 
