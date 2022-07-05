@@ -39,7 +39,7 @@ contract Branaverse is ERC20 {
 
 
 constructor () ERC20("Brana", "BRANA") payable {
-    
+    owner = msg.sender;
     _mint (address(this), maxSupply.mul(10).div(100)); // 10%
     _mint (theCompany, maxSupply.mul(89).div(100)); // 89%
     _mint (theCompany, maxSupply.mul(1).div(200)); // 0.5%
